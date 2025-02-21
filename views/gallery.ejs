@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #ccc;
+            height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 50px; 
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: darkorange;
+        }
+
+        .carousel-container {
+            width: 60%;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: orange;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar"></div> 
+
+    <div class="content">
+        <h1>Gallery</h1>
+
+        <div class="buttons">
+            <a href="/auth/index" class="btn">Home</a>
+            <a href="/catalog" class="btn">Catalog</a>
+            <a href="/contact" class="btn">Contact</a>
+        </div>
+
+        <div class="carousel-container">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel">
+                <img src="/1.png" alt="Image 1">
+                <img src="/2.png" alt="Image 2">
+                <img src="/3.png" alt="Image 3">
+                <img src="/4.png" alt="Image 4">
+                <img src="/5.png" alt="Image 5">
+                <img src="/6.png" alt="Image 6">
+                <img src="/7.png" alt="Image 7">
+                <img src="/8.png" alt="Image 8">
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="sidebar"></div> 
+</div>
+
+<script>
+    let index = 0;
+    const images = document.querySelectorAll('.carousel img');
+    const total = images.length;
+
+    function updateCarousel() {
+        document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+        index = (index + 1) % total;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        index = (index - 1 + total) % total;
+        updateCarousel();
+    }
+</script>
+
+</body>
+</html>

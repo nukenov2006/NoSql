@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #ccc;
+            height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 100px; 
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: darkorange;
+        }
+
+        .info-box {
+            background-color: orange;
+            color: white;
+            border: 2px solid blue;
+            padding: 20px;
+            width: 60%;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar"></div> 
+
+    <div class="content">
+        <h1>My Web Page</h1>
+
+        <div class="buttons">
+            <a href="/catalog" class="btn">Catalog</a>
+            <a href="/contact" class="btn">Contact</a>
+			<a href="/gallery" class="btn">Gallery</a>
+        </div>
+
+        <div class="info-box">
+            <p>Welcome to my website prototype! Here, you'll find the perfect computer for your needs, whether it's for work, gaming, or as a gift.  
+            Our selection covers everything from high-performance gaming rigs to budget-friendly office machines.  
+            We aim to make choosing the right computer easy, convenient, and hassle-free.  
+            Browse through our catalog, compare specifications, and find the perfect match.  
+            Our platform is designed to help you make an informed decision with detailed descriptions, user reviews, and expert recommendations.  
+            No matter your budget or technical expertise, we're here to guide you to the best choice!</p>
+        </div>
+    </div>
+
+    <div class="sidebar"></div> 
+</div>
+
+</body>
+</html>

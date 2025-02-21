@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Темно-серый фон */
+    color: #fff; /* Белый текст */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.card {
+    background: #333; /* Темный фон карточек */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #333; /* Темный фон формы */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555; /* Серый бордер */
+    background: #444; /* Темный фон инпутов */
+    color: #fff; /* Белый текст */
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #fff; /* Белый фон кнопки */
+    color: #000; /* Черный текст */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ddd; /* Серый при наведении */
+}
+
+.alert {
+    padding: 10px;
+    background: #721c24;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
