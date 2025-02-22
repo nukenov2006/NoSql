@@ -46,24 +46,29 @@ Authentication: Passport.js
 
 
 
-Method
+auth.js – Authentication API
 
-Endpoint
+Handles user login, registration, and logout.
+Uses passport for authentication.
+Encrypts passwords with bcrypt.
+catalog.js – Data Catalog API
 
-Description
+Manages fetching and displaying stored data.
+Likely interacts with MongoDB through Mongoose models.
+contact.js – Contact Form API
 
-GET
+Processes user contact requests or feedback.
+May send emails or store messages in the database.
+gallery.js – Image Gallery API
 
-/api/products
+Manages images, likely supporting upload and retrieval.
+Might use MongoDB's GridFS or store file paths.
+index.js – Main Routing
 
-Retrieve all products
+Redirects to different sections (home, dashboard, etc.).
+mainRoutes.js – Core Application API
 
-POST
-
-/api/login
-
-User authentication
-
+Possibly handles general requests and middleware.
 Author
 
 Nukenov Daniyar
